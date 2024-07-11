@@ -1,0 +1,54 @@
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Treatment . ?amd a rdf:AMD . ?s rdf:treats ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Treatment . ?s rdf:treats rdf:Wet_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Medication . ?s rdf:treats rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Disease . ?s rdf:causes rdf:Blindness . } 
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Dry_AMD rdf:causes rdf:Blindness . } 
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a rdf:AMD . ?s rdf:presentIn ?amd . } 
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a rdf:AMD . ?s a rdf:Early_sign . ?s rdf:presentIn ?amd . } 
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a rdf:AMD . ?amd rdf:affects ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { rdf:Dry_AMD rdf:affects ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Avastin rdf:treats rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Dry_AMD rdf:causes rdf:Blurry_vision . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a rdf:AMD . ?amd rdf:affects rdf:Elderly . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Group_of_people . ?amd a rdf:AMD . ?amd rdf:affects ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Action . ?amd a rdf:Age-related_macular_degeneration . ?amd rdf:impairs ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Medical_Procedure . ?amd a rdf:AMD . ?s rdf:treats ?amd . }
+PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:AMD . rdf:CNV rdf:presentIn ?s . }
+PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:AMD . rdf:Reduced_contrast rdf:presentIn ?s . rdf:Drusen rdf:presentIn ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a rdf:AMD . ?s rdf:presentIn ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Treatment . ?s rdf:treats rdf:Wet_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a r+C22df:Symptom . rdf:Wet_AMD rdf:causes ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a rdf:AMD . ?s rdf:presentIn ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Symptom . ?amd a rdf:AMD . ?amd rdf:causes ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Symptom . rdf:Wet_AMD rdf:causes ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a rdf:Treatment . ?amd a rdf:AMD . ?s rdf:treats ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a rdf:Symptom . ?amd a rdf:AMD . ?amd rdf:causes ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a rdf:Group_of_people . ?amd a rdf:AMD . ?amd rdf:affects ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Medical_Procedure . ?amd a rdf:AMD . ?s rdf:treats ?amd . ?s rdf:success_rate ?success_rate . FILTER(?success_rate > 0.90) }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s ?amd where { ?amd a rdf:AMD . ?s a rdf:Treatment . ?s rdf:treats ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Imaging_technique . ?amd a rdf:AMD . ?s rdf:monitors ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Medication . ?amd a rdf:AMD . ?s rdf:treats ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Medication . ?s rdf:treats rdf:Wet_AMD . ?s rdf:treats rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { rdf:Retinal_laser_photocoagulation rdf:success_rate ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Retinal_laser_photocoagulation rdf:treats rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Retinal_laser_photocoagulation rdf:treats rdf:Wet_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?procedure a rdf:Medical_Procedure . ?procedure rdf:treats rdf:Wet_AMD . ?procedure rdf:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?procedure where { ?procedure a rdf:Medical_Procedure . ?procedure rdf:treats rdf:Wet_AMD . ?procedure rdf:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
+PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?procedure where { ?procedure a rdf:Medical_Procedure . ?amd a rdf:AMD . ?procedure rdf:treats ?amd . ?procedure rdf:follow_up_necessary true . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Group_of_people . ?amd a rdf:AMD . FILTER NOT EXISTS { ?amd rdf:affects ?s } . }
+PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s rdf:treats rdf:Wet_AMD . ?s a rdf:Medical_Procedure . ?s rdf:success_rate ?success_rate . } ORDER BY DESC (?success_rate) LIMIT 1
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Action . FILTER NOT EXISTS { rdf:Dry_AMD rdf:impairs ?s } . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Imaging_technique . ?amd a rdf:AMD . FILTER NOT EXISTS { ?s rdf:monitors ?amd . } }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a rdf:AMD . rdf:Optical_coherence_tomography rdf:monitors ?amd . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs rdf:Dry_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs rdf:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Atrophic_AMD owl:sameAs rdf:Dry_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Exudative_AMD owl:sameAs rdf:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Neovascular_AMD owl:sameAs rdf:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { rdf:CNV owl:sameAs ?s . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs rdf:Scotoma . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:AMD . ?s rdf:causes rdf:Blind_spot . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Choroidal_neovascularization rdf:presentIn rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Choroidal_neovascularization rdf:presentIn rdf:Wet_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s ?amd where { ?s a rdf:Medical_Procedure . ?amd a rdf:AMD . ?s rdf:treats ?amd . }

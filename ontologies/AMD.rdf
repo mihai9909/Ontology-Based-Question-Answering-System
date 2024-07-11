@@ -1,0 +1,911 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/age-related_macular_degeneration#"
+     xml:base="http://www.semanticweb.org/age-related_macular_degeneration"
+     xmlns:amd="http://www.semanticweb.org/age-related_macular_degeneration#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:untitled-ontology-16="http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/age-related_macular_degeneration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_NHC0 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_NHC0"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_P106 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_P106"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_P108 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_P108"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_P207 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_P207"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_P366 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_P366"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#affects">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#causes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#causes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Comorbidity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#diagnose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#diagnose">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19254"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#eases -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#eases">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#impairs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#impairs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#monitors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#monitors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#presentIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#presentIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#prevents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#prevents">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#treatmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#treatmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#treats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#treats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#treats">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19254"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#worsens -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#worsens">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#affects_both_eyes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#affects_both_eyes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#follow_up_necessary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#follow_up_necessary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#hereditary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#hereditary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#invasive -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#invasive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#success_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#success_rate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C19254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C19254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25193"/>
+        <obo:IAO_0000115>Occupations within the field of medicine.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C19254</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Biomedical Occupation or Discipline</obo:NCIT_P106>
+        <obo:NCIT_P108>Medical Occupation</obo:NCIT_P108>
+        <obo:NCIT_P207>C1513058</obo:NCIT_P207>
+        <obo:NCIT_P366>Medical_Occupation</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Health Care Occupation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Medical Occupation</oboInOwl:hasExactSynonym>
+        <rdfs:label>Medical Occupation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25193">
+        <rdfs:label>Occupation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#AMD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#AMD">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Cataract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Cataract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Comorbidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Comorbidity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Early_sign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Early_sign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Eye_part -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Glaucoma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Glaucoma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Late_sign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Late_sign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Medication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Medication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Sign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Vitamin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Vitamin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#AREDS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#AREDS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Vitamin"/>
+        <prevents rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <prevents rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Adults -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Adults">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Aflibercept -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Aflibercept">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eylea"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Eylea -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Eylea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Atrophic_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Atrophic_AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Avacincaptad_Pegol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Avacincaptad_Pegol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Avastin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Avastin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Bevacizumab"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Bevacizumab -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Bevacizumab"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Bevacizumab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Bevacizumab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Blind_spot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Blind_spot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Scotoma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Scotoma -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Scotoma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Blindness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Blindness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Comorbidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Blurry_vision -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Blurry_vision">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#CNV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#CNV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Choroidal_neovascularization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Choroidal_neovascularization -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Choroidal_neovascularization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Children -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Children">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Choroidal_neovascularization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Choroidal_neovascularization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+        <presentIn rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Driving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Driving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Drusen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Drusen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Early_sign"/>
+        <presentIn rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <affects rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Elderly"/>
+        <affects rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Macula"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blind_spot"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blindness"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blurry_vision"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision"/>
+        <impairs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Reading"/>
+        <affects_both_eyes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</affects_both_eyes>
+        <hereditary rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hereditary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Elderly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Elderly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Exudative_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Exudative_AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Eylea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Eylea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Geographic_atrophy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Geographic_atrophy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Sign"/>
+        <presentIn rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Lucentis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Lucentis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Ranibizumab"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Ranibizumab -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Ranibizumab"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#MRI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#MRI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+        <monitors rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <monitors rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+        <description>Generates detailed images of all internal structures of the human body, such as blood vessels, muscles, bones and organs</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Macula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Macula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Metamorphopsia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Metamorphopsia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Late_sign"/>
+        <presentIn rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Neovascular_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Neovascular_AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Newborn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Newborn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Optical_coherence_tomography -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Optical_coherence_tomography">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+        <monitors rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <monitors rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+        <description>Uses light waves to capture detailed cross-sectional images of tissues, commonly used in medical fields like ophthalmology to examine the retina and diagnose eye conditions.</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Pegcetacoplan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Pegcetacoplan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Ranibizumab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Ranibizumab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medication"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Reading -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Reading">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Reduced_contrast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Reduced_contrast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Early_sign"/>
+        <presentIn rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Retina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Retina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Retinal_laser_photocoagulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Retinal_laser_photocoagulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+        <follow_up_necessary rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</follow_up_necessary>
+        <invasive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</invasive>
+        <success_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.92</success_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Retinal_pigment_epithelium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Retinal_pigment_epithelium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Scotoma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Scotoma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Symptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Smoking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Smoking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Action"/>
+        <worsens rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <worsens rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Teenagers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Teenagers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Group_of_people"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
+        <affects rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Elderly"/>
+        <affects rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Macula"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blind_spot"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blindness"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Blurry_vision"/>
+        <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision"/>
+        <impairs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Reading"/>
+        <affects_both_eyes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</affects_both_eyes>
+        <hereditary rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hereditary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#X-ray -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#X-ray">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#bifocal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#bifocal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#eye_glasses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#eye_glasses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#magnifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#magnifier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <eases rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#ophthalmologist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#ophthalmologist">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19254"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
+        <treats rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#photoreceptor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#photoreceptor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Eye_part"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/age-related_macular_degeneration#ultrasound -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#ultrasound">
+        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Imaging_technique"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

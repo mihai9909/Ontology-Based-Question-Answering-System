@@ -1,0 +1,14 @@
+results
+app.log
+__pycache__
+AMD_INDEX
+graphdb-10.6.3
+WizardLLM
+WizardLM-LoRA-weights-SPARQL
+WizardLM-LoRA-weights-SPARQL-AMD
+WizardLM-LoRA-weights-SPARQL-SimpleQuestions
+wizard-coder-sparql
+LoRA-weights-sparql
+logs
+/DATASETS/lc_quad2-sparqltotext.csv
+/DATASETS/PAROT_DATASET

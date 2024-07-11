@@ -1,0 +1,10 @@
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD. ?amd amd:causes amd:Blindness. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD. ?amd amd:presentIn?region. ?region amd:dry true. }
+prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Geographic_atrophy amd:presentIn amd:Wet_AMD. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct?s where { ?amd a amd:AMD. ?s amd:worsens?amd. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. } LIMIT 100
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD. ?amd amd:affects_both_eyes true }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD. ?amd amd:hereditary true }

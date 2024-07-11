@@ -1,0 +1,17 @@
+pandas
+huggingface_hub
+rdflib==7.0.0
+langchain_text_splitters==0.2.1
+bitsandbytes==0.43.1
+trl==0.8.6
+faiss_gpu==1.7.2
+peft==0.11.1
+datasets==2.19.2
+langchain-community==0.2.5
+transformers==4.41.2
+tokenizers==0.19.1
+accelerate==0.30.1
+tensorboard==2.9.0
+langchain-huggingface==0.0.3
+flask==3.0.3
+nltk==3.8.1
