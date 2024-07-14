@@ -2,6 +2,7 @@ import flask
 import logging
 import os
 from app_utilities.graphdb_uploader import GraphdbUploader
+from app_utilities.graphdb_query import GraphdbQuery
 from app_utilities.vector_store import VectorStore
 
 to_retriever_fifo = '/tmp/server_retriever_fifo'
@@ -14,8 +15,8 @@ app.logger.setLevel('INFO')
 handler = logging.FileHandler('logs/app.log')
 app.logger.addHandler(handler)
 
-@app.route('/ask', methods=['POST'])
-def ask():
+@app.route('/rag/ask', methods=['POST'])
+def rag_ask():
     if 'query' not in flask.request.json:
         return flask.jsonify({"error": "No query provided"}), 400
 
@@ -27,11 +28,23 @@ def ask():
     if not os.path.exists(from_llm_fifo):
         os.mkfifo(from_llm_fifo)
     SPARQL = open(from_llm_fifo, 'r').read()
-    return flask.jsonify({'sparql': SPARQL}), 200
+    return GraphdbQuery.query(SPARQL)
 
 UPLOAD_FOLDER = './ontologies'
 if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER)
+
+@app.route('/query')
+def query():
+    if 'query' not in flask.request.args:
+        return flask.jsonify({"error": "No query provided"}), 400
+
+    query = flask.request.args['query']
+    return GraphdbQuery.query(query)
+
+@app.route('/ask')
+def ask():
+    return flask.jsonify({"message": "TODO"})
 
 @app.route('/ontologies/upload', methods=['POST'])
 def upload_rdf():

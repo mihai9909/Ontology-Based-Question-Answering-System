@@ -4,11 +4,11 @@ import io
 class GraphdbUploader:
   @staticmethod
   def upload(file_name):
-    url = f"http://localhost:7200/repositories/{file_name}"
+    url = f"http://localhost:7200/repositories/AMD/statements"
     headers = {
       "Content-Type": 'text/turtle',
     }
-    data = GraphdbUploader.config_file(file_name, "Repository Description")
+    data = GraphdbUploader.config_file("AMD", "Repository Description")
     response = requests.put(url, headers=headers, data=data)
     return response
 

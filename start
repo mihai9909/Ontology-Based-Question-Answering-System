@@ -6,3 +6,13 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 echo -e "${GREEN}Running Docker container...${NC}"
+
+echo -e "${YELLOW}Starting GraphDB Server...${NC}"
+/graphdb-10.6.3/bin/graphdb -s -d
+
+echo -e "${YELLOW}Starting Flask Server...${NC}"
+flask run &
+
+echo -e "${YELLOW}Starting RAG pipeline...${NC}"
+CUDA_VISIBLE_DEVICES=4 python3 retriever.py &
+CUDA_VISIBLE_DEVICES=5 python3 infer.py &

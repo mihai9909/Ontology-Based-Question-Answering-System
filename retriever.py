@@ -13,7 +13,7 @@ if not os.path.exists(server_fifo_path):
 if not os.path.exists(llm_fifo_path):
     os.mkfifo(llm_fifo_path)
 
-db = FAISS.load_local("AMD_INDEX",
+db = FAISS.load_local("vector_store",
                       HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2'),
                       allow_dangerous_deserialization=True)
 
