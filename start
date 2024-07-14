@@ -8,7 +8,7 @@ NC='\033[0m'
 echo -e "${GREEN}Running Docker container...${NC}"
 
 echo -e "${YELLOW}Starting GraphDB Server...${NC}"
-/graphdb-10.6.3/bin/graphdb -s -d
+./graphdb-10.6.3/bin/graphdb -s -d
 
 echo -e "${YELLOW}Starting Flask Server...${NC}"
 flask run &
