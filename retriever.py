@@ -7,16 +7,15 @@ import os
 server_fifo_path = '/tmp/server_retriever_fifo'
 llm_fifo_path = '/tmp/retriever_llm_fifo'
 
-db = FAISS.load_local("AMD_INDEX",
-                      HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2'),
-                      allow_dangerous_deserialization=True)
-
 if not os.path.exists(server_fifo_path):
     os.mkfifo(server_fifo_path)
 
-# Create the FIFO if it doesn't exist
 if not os.path.exists(llm_fifo_path):
     os.mkfifo(llm_fifo_path)
+
+db = FAISS.load_local("AMD_INDEX",
+                      HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2'),
+                      allow_dangerous_deserialization=True)
 
 with open(server_fifo_path, 'r') as server_fifo:
     while True:

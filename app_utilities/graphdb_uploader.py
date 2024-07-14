@@ -3,19 +3,18 @@ import io
 
 class GraphdbUploader:
   @staticmethod
-  def upload(file_name, repo_description):
-    url = "http://localhost:7200/repositories/{file_name}"
+  def upload(file_name):
+    url = f"http://localhost:7200/repositories/{file_name}"
     headers = {
       "Content-Type": 'text/turtle',
-      "Accept": "*/*"
     }
-    data = GraphdbUploader.config_file(file_name, repo_description)
+    data = GraphdbUploader.config_file(file_name, "Repository Description")
     response = requests.put(url, headers=headers, data=data)
     return response
 
   @staticmethod
   def config_file(repo_id, repo_description):
-    config = """@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    config = f"""@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rep: <http://www.openrdf.org/config/repository#> .
 @prefix sail: <http://www.openrdf.org/config/sail#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

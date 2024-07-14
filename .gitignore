@@ -12,3 +12,4 @@ LoRA-weights-sparql
 logs
 /DATASETS/lc_quad2-sparqltotext.csv
 /DATASETS/PAROT_DATASET
+/vector_store
