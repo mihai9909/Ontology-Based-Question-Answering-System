@@ -29,7 +29,15 @@ with open(server_fifo_path, 'r') as server_fifo:
         docs = db.similarity_search(query)
 
         context = ''.join(doc.page_content for doc in docs[:3])
-        instruction = f'<s>[INST] Given this ontology:\n {context} \n\n Write a SPARQL query that answers this question:\n {query} [/INST]'
+        instruction = f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+### Instruction:
+Given this ontology:
+{context}
+Write a SPARQL query that answers the following question. Respond only with the SPARQL query and nothing else.
+{query}
+
+### Response:"""
 
         # Pass the instruction to the LLM
         with open(llm_fifo_path, 'w') as fifo:

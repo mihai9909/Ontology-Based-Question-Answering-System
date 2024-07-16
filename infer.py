@@ -19,16 +19,11 @@ from peft import (PeftModel,
 import os
 
 def extract_sparql(text):
-    after_inst_pattern = r'\[/INST\](.*)'
-    match = re.search(after_inst_pattern, text, re.DOTALL)
+    pattern = re.compile(r'```(.*?)```', re.DOTALL)
+    match = re.search(pattern, text)
     if match:
-        content_after_inst = match.group(1).strip()
-    else:
-        content_after_inst = ""
-
-    cleaned_content = re.sub(r'\[INST\]|\[/INST\]', '', content_after_inst)
-
-    return cleaned_content
+        return match.group(1).strip()
+    return None
 
 model_checkpoint = "WizardLLM"
 
@@ -38,17 +33,11 @@ base_model = AutoModelForCausalLM.from_pretrained(
                 return_dict=True,
                 torch_dtype=torch.float16).to('cuda')
 
-# Merge the model with LoRA weights
-lora_weights = "WizardLM-LoRA-weights-SPARQL-AMD"
-
-model = PeftModel.from_pretrained(base_model, lora_weights)
-model = model.merge_and_unload(progressbar=True, safe_merge=True)
-
 tokenizer = AutoTokenizer.from_pretrained(model_checkpoint, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_new_tokens=500)
+pipe = pipeline(task="text-generation", model=base_model, tokenizer=tokenizer, max_new_tokens=500)
 
 read_fifo_path = '/tmp/retriever_llm_fifo'
 response_fifo_path = '/tmp/llm_server_fifo'

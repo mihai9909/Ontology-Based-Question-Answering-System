@@ -28,7 +28,7 @@ def rag_ask():
     if not os.path.exists(from_llm_fifo):
         os.mkfifo(from_llm_fifo)
     SPARQL = open(from_llm_fifo, 'r').read()
-    return GraphdbQuery.query(SPARQL)
+    return GraphdbQuery.query(SPARQL).text, 200
 
 UPLOAD_FOLDER = './ontologies'
 if not os.path.exists(UPLOAD_FOLDER):
@@ -36,11 +36,11 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 @app.route('/query')
 def query():
-    if 'query' not in flask.request.args:
+    if 'query' not in flask.request.json:
         return flask.jsonify({"error": "No query provided"}), 400
 
-    query = flask.request.args['query']
-    return GraphdbQuery.query(query)
+    query = flask.request.json['query']
+    return GraphdbQuery.query(query).text, 200
 
 @app.route('/ask')
 def ask():
