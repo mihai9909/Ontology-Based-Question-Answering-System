@@ -1,4 +1,6 @@
 #!/bin/bash
 set -eo pipefail
 
+apt update && apt install -y default-jdk locales
+locale-gen en_US.UTF-8
 pip install -r requirements.txt

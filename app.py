@@ -28,7 +28,12 @@ def rag_ask():
     if not os.path.exists(from_llm_fifo):
         os.mkfifo(from_llm_fifo)
     SPARQL = open(from_llm_fifo, 'r').read()
-    return GraphdbQuery.query(SPARQL).text, 200
+
+    response = GraphdbQuery.query(SPARQL)
+    if response.status_code != 200:
+        return flask.jsonify({"error": "Error querying the ontology", "SPARQL": SPARQL, 'text': response.text }), 200
+    
+    return response.text, 200
 
 UPLOAD_FOLDER = './ontologies'
 if not os.path.exists(UPLOAD_FOLDER):
@@ -42,9 +47,31 @@ def query():
     query = flask.request.json['query']
     return GraphdbQuery.query(query).text, 200
 
-@app.route('/ask')
+from_trained_model_fifo = '/tmp/trained-model_server_fifo'
+to_trained_model_fifo = '/tmp/server_trained-model_fifo'
+
+@app.route('/ask', methods=['POST'])
 def ask():
-    return flask.jsonify({"message": "TODO"})
+    if 'query' not in flask.request.json:
+            return flask.jsonify({"error": "No query provided"}), 400
+
+    query = flask.request.json['query']
+    
+    if not os.path.exists(to_trained_model_fifo):
+        os.mkfifo(to_trained_model_fifo)
+    
+    open(to_trained_model_fifo, 'w').write(query)
+
+    if not os.path.exists(from_trained_model_fifo):
+        os.mkfifo(from_trained_model_fifo)
+    
+    SPARQL = open(from_trained_model_fifo, 'r').read()
+
+    response = GraphdbQuery.query(SPARQL)
+    if response.status_code != 200:
+        return flask.jsonify({"error": "Error querying the ontology", "SPARQL": SPARQL, 'text': response.text}), 200
+    
+    return response.text, 200
 
 @app.route('/ontologies/upload', methods=['POST'])
 def upload_rdf():
