@@ -1,0 +1,10 @@
+SELECT?treatment WHERE { ?treatment rdfs:subClassOf* <http://purl.obolibrary.org/obo/NCIT_C16550>. }
+SELECT?symptom WHERE { ?disease rdfs:label "Age-related Macular Degeneration"@en. ?disease rdfs:subClassOf?symptom. }
+SELECT?x WHERE { ?x rdfs:subClassOf* obo:DOID_4325. ?x rdfs:label "blindness". }
+ASK {?s a age-related-macular-degeneration:Dry-AMD.?s age-related-macular-degeneration:has-sign-of geographic-atrophy }
+ASK {?s a age-related-macular-degeneration:Wet-AMD.?s age-related-macular-degeneration:has-sign age-related-macular-degeneration:Geographic-Atrophy }
+SELECT?worsens WHERE { ?worsens rdfs:subClassOf* obo:DOID_4325. }
+SELECT?treatment WHERE { ?treatment rdf:type :Treatment. ?treatment :has_outcome :AMD. ?treatment :has_date?date. FILTER (?date > "2021-01-01"^^xsd:date) }
+SELECT?person WHERE { ?person a amd:Person. ?person amd:hasEye?eye. ?eye a amd:Eye. FILTER (?eye!= amd:BothEyes) }
+SELECT?vitamin WHERE { ?vitamin rdfs:subClassOf* obo:VITD. ?vitamin rdfs:subClassOf* obo:VITK. ?vitamin rdfs:subClassOf* obo:VITB6. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB1. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClassOf* obo:VITB12. ?vitamin rdfs:subClass
+ASK {?person rdf:type :AMDHereditary }

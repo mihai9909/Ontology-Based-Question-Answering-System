@@ -1,0 +1,10 @@
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Treatment . ?amd a rdf:AMD . ?s rdf:treats ?amd . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a rdf:Symptom . ?amd a rdf:AMD . ?amd rdf:causes ?s . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a rdf:AMD . ?amd rdf:causes rdf:Blindness . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Geographic_atrophy rdf:presentIn rdf:Dry_AMD . }
+prefix rdf:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { rdf:Geographic_atrophy rdf:presentIn rdf:Wet_AMD . }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:worsens ?amd . }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:affects_both_eyes true . }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s a amd:Vitamin . ?s amd:prevents ?amd . }
+PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }

@@ -1,82 +1,82 @@
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select distinct ?s where { ?s rdf:type amd:Treatment . ?amd rdf:type amd:AMD . ?s amd:treats ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s rdf:type amd:Treatment . ?s amd:treats amd:Wet_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Medication . ?s amd:treats amd:Dry_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Disease . ?s amd:causes amd:Blindness . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Dry_AMD amd:causes amd:Blindness . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . } 
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s a amd:Early_sign . ?s amd:presentIn ?amd . } 
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?amd amd:affects ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { amd:Dry_AMD amd:affects ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Avastin amd:treats amd:Dry_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Dry_AMD amd:causes amd:Blurry_vision . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:affects amd:Elderly . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . ?amd amd:affects ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Action . ?amd a amd:Age-related_macular_degeneration . ?amd amd:impairs ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . }
-PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:AMD . amd:CNV amd:presentIn ?s . }
-PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:AMD . amd:Reduced_contrast amd:presentIn ?s . amd:Drusen amd:presentIn ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Treatment . ?s amd:treats amd:Wet_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a r+C22df:Symptom . amd:Wet_AMD amd:causes ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Symptom . ?amd a amd:AMD . ?amd amd:causes ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Symptom . amd:Wet_AMD amd:causes ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a amd:Treatment . ?amd a amd:AMD . ?s amd:treats ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a amd:Symptom . ?amd a amd:AMD . ?amd amd:causes ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?amd ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . ?amd amd:affects ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . ?s amd:success_rate ?success_rate . FILTER(?success_rate > 0.90) }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s ?amd where { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Imaging_technique . ?amd a amd:AMD . ?s amd:monitors ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Medication . ?amd a amd:AMD . ?s amd:treats ?amd . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Medication . ?s amd:treats amd:Wet_AMD . ?s amd:treats amd:Dry_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { amd:Retinal_laser_photocoagulation amd:success_rate ?s . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Retinal_laser_photocoagulation amd:treats amd:Dry_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Retinal_laser_photocoagulation amd:treats amd:Wet_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?procedure a amd:Medical_Procedure . ?procedure amd:treats amd:Wet_AMD . ?procedure amd:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?procedure where { ?procedure a amd:Medical_Procedure . ?procedure amd:treats amd:Wet_AMD . ?procedure amd:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
-PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?procedure where { ?procedure a amd:Medical_Procedure . ?amd a amd:AMD . ?procedure amd:treats ?amd . ?procedure amd:follow_up_necessary true . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . FILTER NOT EXISTS { ?amd amd:affects ?s } . }
-PREFIX : <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16/> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s amd:treats amd:Wet_AMD . ?s a amd:Medical_Procedure . ?s amd:success_rate ?success_rate . } ORDER BY DESC (?success_rate) LIMIT 1
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Action . FILTER NOT EXISTS { amd:Dry_AMD amd:impairs ?s } . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:Imaging_technique . ?amd a amd:AMD . FILTER NOT EXISTS { ?s amd:monitors ?amd . } }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . amd:Optical_coherence_tomography amd:monitors ?amd . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs amd:Dry_AMD . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs amd:Wet_AMD . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Atrophic_AMD owl:sameAs amd:Dry_AMD . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Exudative_AMD owl:sameAs amd:Wet_AMD . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Neovascular_AMD owl:sameAs amd:Wet_AMD . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { amd:CNV owl:sameAs ?s . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s owl:sameAs amd:Scotoma . }
-PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?s a amd:AMD . ?s amd:causes amd:Blind_spot . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Choroidal_neovascularization amd:presentIn amd:Dry_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { amd:Choroidal_neovascularization amd:presentIn amd:Wet_AMD . }
-prefix amd:<http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s ?amd where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s where { ?s a amd:AMD . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s ?amd where { ?s a amd:Sign . ?amd a amd:AMD . ?s amd:presentIn ?amd }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s where { ?amd a amd:AMD . ?s a amd:Medical_Procedure . ?s amd:treats ?amd . ?s amd:invasive false . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s ?amd where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?amd ?description where { ?amd a amd:AMD . ?amd amd:description ?description }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?amd ?description where { ?amd a amd:AMD . } limit 2
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:causes amd:Blindness . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s where { ?s amd:treats amd:Dry_AMD . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s where { ?s amd:treats amd:Wet_AMD . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:prevents ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select ?s where { ?amd a amd:AMD . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> PREFIX obo: <http://purl.obolibrary.org/obo/> select distinct ?s { ?amd a amd:AMD . ?s a obo:NCIT_C19254 . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Assistive_Device . ?s amd:eases ?amd }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?s a amd:Comorbidity . ?amd amd:causes ?s . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:prevents ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s a amd:Vitamin . ?s amd:prevents ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> ask where { ?amd a amd:AMD . ?amd amd:affects_both_eyes true . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?amd amd:causes ?s . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
-PREFIX amd: <http://www.semanticweb.org/stefan/ontologies/2024/4/untitled-ontology-16#> select distinct ?s where { ?amd a amd:AMD . ?s amd:worsens ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select distinct ?s where { ?s rdf:type amd:Treatment . ?amd rdf:type amd:AMD . ?s amd:treats ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s rdf:type amd:Treatment . ?s amd:treats amd:Wet_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Medication . ?s amd:treats amd:Dry_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Disease . ?s amd:causes amd:Blindness . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Dry_AMD amd:causes amd:Blindness . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . } 
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s a amd:Early_sign . ?s amd:presentIn ?amd . } 
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?amd amd:affects ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { amd:Dry_AMD amd:affects ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Avastin amd:treats amd:Dry_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Dry_AMD amd:causes amd:Blurry_vision . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:affects amd:Elderly . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . ?amd amd:affects ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Action . ?amd a amd:Age-related_macular_degeneration . ?amd amd:impairs ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . }
+PREFIX : <http://www.semanticweb.org/age-related_macular_degeneration/> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:AMD . amd:CNV amd:presentIn ?s . }
+PREFIX : <http://www.semanticweb.org/age-related_macular_degeneration/> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:AMD . amd:Reduced_contrast amd:presentIn ?s . amd:Drusen amd:presentIn ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Treatment . ?s amd:treats amd:Wet_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a r+C22df:Symptom . amd:Wet_AMD amd:causes ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:presentIn ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Symptom . ?amd a amd:AMD . ?amd amd:causes ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Symptom . amd:Wet_AMD amd:causes ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?amd ?s where { ?s a amd:Treatment . ?amd a amd:AMD . ?s amd:treats ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?amd ?s where { ?s a amd:Symptom . ?amd a amd:AMD . ?amd amd:causes ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?amd ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . ?amd amd:affects ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . ?s amd:success_rate ?success_rate . FILTER(?success_rate > 0.90) }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s ?amd where { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Imaging_technique . ?amd a amd:AMD . ?s amd:monitors ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Medication . ?amd a amd:AMD . ?s amd:treats ?amd . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Medication . ?s amd:treats amd:Wet_AMD . ?s amd:treats amd:Dry_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { amd:Retinal_laser_photocoagulation amd:success_rate ?s . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Retinal_laser_photocoagulation amd:treats amd:Dry_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Retinal_laser_photocoagulation amd:treats amd:Wet_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?procedure a amd:Medical_Procedure . ?procedure amd:treats amd:Wet_AMD . ?procedure amd:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select ?procedure where { ?procedure a amd:Medical_Procedure . ?procedure amd:treats amd:Wet_AMD . ?procedure amd:success_rate ?success_rate . FILTER(?success_rate > 0.9) }
+PREFIX : <http://www.semanticweb.org/age-related_macular_degeneration/> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?procedure where { ?procedure a amd:Medical_Procedure . ?amd a amd:AMD . ?procedure amd:treats ?amd . ?procedure amd:follow_up_necessary true . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Group_of_people . ?amd a amd:AMD . FILTER NOT EXISTS { ?amd amd:affects ?s } . }
+PREFIX : <http://www.semanticweb.org/age-related_macular_degeneration/> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s amd:treats amd:Wet_AMD . ?s a amd:Medical_Procedure . ?s amd:success_rate ?success_rate . } ORDER BY DESC (?success_rate) LIMIT 1
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Action . FILTER NOT EXISTS { amd:Dry_AMD amd:impairs ?s } . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:Imaging_technique . ?amd a amd:AMD . FILTER NOT EXISTS { ?s amd:monitors ?amd . } }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . amd:Optical_coherence_tomography amd:monitors ?amd . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s owl:sameAs amd:Dry_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s owl:sameAs amd:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Atrophic_AMD owl:sameAs amd:Dry_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Exudative_AMD owl:sameAs amd:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Neovascular_AMD owl:sameAs amd:Wet_AMD . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { amd:CNV owl:sameAs ?s . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s owl:sameAs amd:Scotoma . }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?s a amd:AMD . ?s amd:causes amd:Blind_spot . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Choroidal_neovascularization amd:presentIn amd:Dry_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Choroidal_neovascularization amd:presentIn amd:Wet_AMD . }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s ?amd where { ?s a amd:Medical_Procedure . ?amd a amd:AMD . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s where { ?s a amd:AMD . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s ?amd where { ?s a amd:Sign . ?amd a amd:AMD . ?s amd:presentIn ?amd }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s where { ?amd a amd:AMD . ?s a amd:Medical_Procedure . ?s amd:treats ?amd . ?s amd:invasive false . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s ?amd where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:monitors ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?amd ?description where { ?amd a amd:AMD . ?amd amd:description ?description }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?amd ?description where { ?amd a amd:AMD . } limit 2
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:causes amd:Blindness . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s where { ?s amd:treats amd:Dry_AMD . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s where { ?s amd:treats amd:Wet_AMD . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:prevents ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:hereditary true }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select ?s where { ?amd a amd:AMD . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> PREFIX obo: <http://purl.obolibrary.org/obo/> select distinct ?s { ?amd a amd:AMD . ?s a obo:NCIT_C19254 . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Assistive_Device . ?s amd:eases ?amd }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?s a amd:Comorbidity . ?amd amd:causes ?s . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:prevents ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s a amd:Vitamin . ?s amd:prevents ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD . ?amd amd:affects_both_eyes true . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?amd amd:causes ?s . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s { ?amd a amd:AMD . ?s a amd:Treatment . ?s amd:treats ?amd . }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct ?s where { ?amd a amd:AMD . ?s amd:worsens ?amd . }

@@ -58,4 +58,6 @@ with open(read_fifo_path, 'r') as fifo:
             continue
         result = pipe(instruction)
         response = extract_sparql(result[0]['generated_text'])
+        if response is None:
+            response = 'No SPARQL query generated'
         open(response_fifo_path, 'w').write(response)

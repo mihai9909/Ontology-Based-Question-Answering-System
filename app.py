@@ -33,7 +33,8 @@ def rag_ask():
     if response.status_code != 200:
         return flask.jsonify({"error": "Error querying the ontology", "SPARQL": SPARQL, 'text': response.text }), 200
     
-    return response.text, 200
+    print(SPARQL)
+    return { 'text': response.text, 'SPARQL': SPARQL }, 200
 
 UPLOAD_FOLDER = './ontologies'
 if not os.path.exists(UPLOAD_FOLDER):
@@ -87,7 +88,8 @@ def upload_rdf():
             filename = os.path.join(UPLOAD_FOLDER, file.filename)
             file.save(filename)
             file_basename = file.filename.split('.')[0]
-            GraphdbUploader.upload(file_basename)
+            response = GraphdbUploader.upload(file_basename)
+            print(response.text)
             if not VectorStore().create(file_basename):
                 return flask.jsonify({"error": "Error creating vector store"}), 500
             else:

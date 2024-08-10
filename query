@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Read query from command line argument
+query=$1
+
+curl -X POST -H "Content-Type: application/sparql-query" -H "Accept: application/json" -d "$query" http://localhost:7200/repositories/AMD
