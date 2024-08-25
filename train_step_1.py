@@ -37,7 +37,6 @@ NC='\033[0m'
 print("Devices available: ", GREEN + str(torch.cuda.device_count()) + NC)
 
 current_device = torch.cuda.current_device()
-print("Current device: ", CYAN + str(current_device) + NC)
 print("Current device name:", CYAN + str(torch.cuda.get_device_name(current_device)) + NC)
 
 huggingface_token=os.environ.get('HUGGINGFACE_TOKEN', None)
