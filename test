@@ -18,5 +18,5 @@ if [ ! "$no_deps" ]; then
     ./dependencies
 fi
 
-CUDA_VISIBLE_DEVICES=2 python3 ./test.py
+CUDA_VISIBLE_DEVICES=6 python3 ./test.py
 

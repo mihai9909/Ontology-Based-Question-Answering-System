@@ -72,6 +72,7 @@ def ask():
     if response.status_code != 200:
         return flask.jsonify({"error": "Error querying the ontology", "SPARQL": SPARQL, 'text': response.text}), 200
     
+    app.logger.info(SPARQL)
     return response.text, 200
 
 @app.route('/ontologies/upload', methods=['POST'])

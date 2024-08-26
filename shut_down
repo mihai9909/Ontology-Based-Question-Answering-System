@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the PID of the script itself
+self_pid=$$
+
+# Iterate over all PIDs except for the ones we want to exclude
+for pid in $(ps -e -o pid=); do
+    if [[ $pid -ne 1 && $pid -ne $self_pid ]]; then
+        # Kill the process
+        kill -9 $pid
+    fi
+done

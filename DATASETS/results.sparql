@@ -1,10 +1,20 @@
-PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }
-PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?s a amd:Treatment. ?amd a amd:AMD. ?s amd:treats?amd. }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. }
 prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:AMD amd:causes amd:Blindness. }
-PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:Geographic_atrophy. ?amd amd:treats amd:Dry_AMD. }
-PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:Geographic_atrophy. ?amd amd:treats amd:Wet_AMD. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Dry_AMD amd:causes amd:Geographic_atrophy. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Geographic_atrophy amd:causes amd:Wet_AMD. }
 prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:worsens?amd. }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?s a amd:Treatment. ?amd a amd:AMD. ?s amd:treats?amd. }
+prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:AMD amd:affects amd:Left_eye. amd:AMD amd:affects amd:Right_eye. }
 PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }
-prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD. ?amd amd:affects_both_eyes true. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD. ?amd amd:hereditary true }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:assists?amd. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. }
+PREFIX owl: <http://www.w3.org/2002/07/owl#> prefix amd:<http://www.semanticweb.org/age-related_macular_degeneration#> ask where { amd:Atrophic_AMD owl:sameAs amd:Dry_AMD. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:monitors?amd. }
 PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }
-PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> ask where { ?amd a amd:AMD. ?amd amd:hereditary true } ask where { ?amd a amd:AMD. ?amd amd:hereditary false }
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. } LIMIT 1000
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. } LIMIT 1000
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:presentIn?amd. } LIMIT 1000
+PREFIX amd: <http://www.semanticweb.org/age-related_macular_degeneration#> select distinct?s where { ?amd a amd:AMD. ?s amd:treats?amd. }

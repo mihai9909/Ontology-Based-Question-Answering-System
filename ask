@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d "{\"query\":\"$1\"}" http://localhost:5000/ask

@@ -72,7 +72,7 @@ pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_le
 
 ds = load_dataset("mihai9909/Age-related-Macular-Degeneration-NL2SPARQL")
 lines = ds['test']['NL_Query']
-output_file = open('DATASETS/results.sparql', 'w')
+output_file = open('EVALUATION/results.sparql', 'w')
 
 for prompt in lines:
     prompt = prompt.strip()

@@ -28,7 +28,7 @@ class GraphdbUploader:
             <http://www.ontotext.com/config/graphdb#base-URL> "http://localhost:7200/{repo_id}#";
             <http://www.ontotext.com/config/graphdb#check-for-inconsistencies> "false";
             <http://www.ontotext.com/config/graphdb#defaultNS> "http://localhost:7200/{repo_id}#";
-            <http://www.ontotext.com/config/graphdb#disable-sameAs> "true";
+            <http://www.ontotext.com/config/graphdb#disable-sameAs> "false";
             <http://www.ontotext.com/config/graphdb#enable-context-index> "false";
             <http://www.ontotext.com/config/graphdb#enable-fts-index> "false";
             <http://www.ontotext.com/config/graphdb#enable-literal-index> "true";

@@ -30,5 +30,5 @@ fi
 
 
 echo -e "${GREEN}Started training process${NC}"
-CUDA_VISIBLE_DEVICES=2,3,6 python3 ./train.py
+CUDA_VISIBLE_DEVICES=5,6,7 python3 ./train.py
 

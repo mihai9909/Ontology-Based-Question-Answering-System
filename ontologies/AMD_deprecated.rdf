@@ -200,16 +200,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/age-related_macular_degeneration#contagious -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#contagious">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/age-related_macular_degeneration#description -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#description">
@@ -244,16 +234,6 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#invasive">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Medical_Procedure"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/age-related_macular_degeneration#painful -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#painful">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Disease"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -482,23 +462,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/age-related_macular_degeneration#Amsler_grid -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Amsler_grid">
-        <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Assistive_Device"/>
-        <description>The grid helps in identifying conditions like age-related macular degeneration (AMD), macular edema, or other disorders that affect central vision. The Amsler grid consists of a simple square grid of horizontal and vertical lines. When a person looks at the dot in the center, they should be able to see the grid as a series of straight lines if their vision is normal.</description>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/age-related_macular_degeneration#Atrophic_AMD -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Atrophic_AMD">
         <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Dry_AMD"/>
         <owl:differentFrom rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
-        <contagious rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</contagious>
-        <painful rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</painful>
     </owl:NamedIndividual>
     
 
@@ -635,9 +604,7 @@
         <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision"/>
         <impairs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Reading"/>
         <affects_both_eyes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</affects_both_eyes>
-        <contagious rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</contagious>
         <hereditary rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hereditary>
-        <painful rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</painful>
     </owl:NamedIndividual>
     
 
@@ -655,8 +622,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Exudative_AMD">
         <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
-        <contagious rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</contagious>
-        <painful rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</painful>
     </owl:NamedIndividual>
     
 
@@ -742,8 +707,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/age-related_macular_degeneration#Neovascular_AMD">
         <rdf:type rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Age-related_macular_degeneration"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Wet_AMD"/>
-        <contagious rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</contagious>
-        <painful rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</painful>
     </owl:NamedIndividual>
     
 
@@ -874,9 +837,7 @@
         <causes rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Loss_of_central_vision"/>
         <impairs rdf:resource="http://www.semanticweb.org/age-related_macular_degeneration#Reading"/>
         <affects_both_eyes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</affects_both_eyes>
-        <contagious rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</contagious>
         <hereditary rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hereditary>
-        <painful rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</painful>
     </owl:NamedIndividual>
     
 
